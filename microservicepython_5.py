@@ -6,6 +6,7 @@ import MySQLdb
 import json
 import requests
 import sys
+import decimal
 from flask import Flask, request 
 
 class DecimalEncoder(json.JSONEncoder):
@@ -74,7 +75,7 @@ class Microservice:
                 db.close()
                 
                 return items               
-        except ConnectionError as e:
+        except IOError as e:
             print ("Error en conexión a url ".url)
 
     if __name__ == '__main__':

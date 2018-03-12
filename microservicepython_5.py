@@ -29,7 +29,7 @@ class Microservice:
                 
                 criteria = request.args.get('id_producto')    
 
-                db = MySQLdb.connect(host="18.221.110.33", user="root", passwd="uniandes1",  port=3306, db="microservices", charset='utf8',use_unicode=True)        
+                db = MySQLdb.connect(host="18.188.72.8", user="root", passwd="uniandes1",  port=3306, db="microservices", charset='utf8',use_unicode=True)        
                 cur = db.cursor()
                 query = ("SELECT * FROM stock WHERE id_producto = %s")
                 cur.execute(query, [criteria])
@@ -57,7 +57,7 @@ class Microservice:
                 else:
                     criteria = request.args.get('id_producto')
                     
-                db = MySQLdb.connect(host="18.221.110.33", user="root", passwd="uniandes1",  port=3306, db="microservices", charset='utf8',use_unicode=True)        
+                db = MySQLdb.connect(host="18.188.72.8", user="root", passwd="uniandes1",  port=3306, db="microservices", charset='utf8',use_unicode=True)        
                 cur = db.cursor()
                 query = ("SELECT * FROM stock WHERE id_producto = %s")
                 cur.execute(query, [criteria])

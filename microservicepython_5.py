@@ -76,7 +76,7 @@ class Microservice:
                 
                 return items               
         except IOError as e:
-            print ("Error en conexión a url ".url)
+            print ("Error en conexion a url ".url)
 
     if __name__ == '__main__':
         app.run(host="0.0.0.0", debug=True, port=5004)
